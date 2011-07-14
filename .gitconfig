@@ -1,0 +1,11 @@
+[user]
+	email = shashlov@gmail.com
+	name = Dmitry Shashlov
+[core]
+    editor = mvim --remote-tab-wait-silent
+    mergeoptions = --no-ff
+[alias]
+    lg = log --graph --pretty=format:'%Cred%h%Creset [%Cgreen(%cr)%Creset] -%C(yellow)%d%Creset %s' 
+    lgt = log --graph --pretty=format:'%Cred%h%Creset [%Cgreen(%cr)%Creset] -%C(yellow)%d%Creset %s' --since='1 day ago' 
+    lgw = log --graph --pretty=format:'%Cred%h%Creset [%Cgreen(%cr)%Creset] -%C(yellow)%d%Creset %s' --since='1 week ago' 
+    co = checkout
