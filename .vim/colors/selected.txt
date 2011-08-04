@@ -1,0 +1,19 @@
+dark schemes:
+    anotherdark
+    camo
+    darkZ
+    darkspectrum
+    desertEx -
+    earendel -
+    freya -
+    herald -
+    kellys +
+    moria -
+    mustang
+    rdark
+    tango2
+    two2tango
+
+crazy schemes:
+    dw_*
+    fruity

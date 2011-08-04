@@ -46,12 +46,13 @@ set autoread
 nnoremap <F1> :buffers<CR>
 nnoremap <F2> :registers<CR>
 nnoremap <F3> :marks<CR>
+nnoremap <F4> :NERDTreeToggle<CR>
 nnoremap <F5> :w<CR>
 nnoremap <S-F5> :wa<CR>
 nnoremap <F6> :nohl<CR>
 nnoremap <F7> :bp<CR>
 nnoremap <F8> :bd<CR>
-nnoremap <S-F8> :w :bd!<CR>
+" nnoremap <S-F8> :w :bd!<CR>
 nnoremap <F9> :bn<CR>
 
 " text moving maps
