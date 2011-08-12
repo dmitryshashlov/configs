@@ -9,3 +9,10 @@
     lgt = log --graph --pretty=format:'%Cred%h%Creset [%Cgreen(%cr)%Creset] -%C(yellow)%d%Creset %s' --since='1 day ago' 
     lgw = log --graph --pretty=format:'%Cred%h%Creset [%Cgreen(%cr)%Creset] -%C(yellow)%d%Creset %s' --since='1 week ago' 
     co = checkout
+
+# Vimdiff tests 
+# [diff]
+#     tool = mvimdiff
+# [difftool "mvimdiff"]
+#     cmd = ~/.sh/mvimdiff.sh $LOCAL $REMOTE
+#     prompt = false

@@ -1,0 +1,3 @@
+:set fullscreen
+:tabdo VCSVimDiff
+:tabdo normal =

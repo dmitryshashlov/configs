@@ -36,7 +36,7 @@ set hlsearch
 
 set guioptions=egmt
 
-set fullscreen
+" set fullscreen
 
 set fileencoding=utf-8
 
@@ -54,6 +54,9 @@ nnoremap <F7> :bp<CR>
 nnoremap <F8> :bd<CR>
 " nnoremap <S-F8> :w :bd!<CR>
 nnoremap <F9> :bn<CR>
+
+nnoremap <S-F7> :cp<CR>
+nnoremap <S-F9> :cn<CR>
 
 " text moving maps
 " TODO:

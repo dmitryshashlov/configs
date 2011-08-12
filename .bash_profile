@@ -3,7 +3,7 @@ export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 
 # Vim
 ################################################################################
-alias v="mvim --remote-silent"
+alias v="mvim  --remote-silent"
 alias xco="open *.xcodeproj -a XCode"
 
 # Git
@@ -25,7 +25,11 @@ alias gaa="git add ."
 alias glg="git lg"
 alias glgt="git lgt"
 alias glgw="git lgw"
+alias gb="git branch"
 alias gba="git branch -a"
+
+alias gd="git_diff"
+# alias gdv="git_mvim_diff"
 
 # Other commands
 ################################################################################
@@ -45,13 +49,11 @@ export _GC=~/.gitconfig
 # Projects
 ################################################################################
 export IP=~/Projects/ios
-export BN=~/Projects/ios/bank-navigator
-export MN=~/Projects/ios/menu-navigator
-export ENVY=~/Projects/ios/envy
-export OM=~/Projects/ios/order-manager
-export TT=~/Projects/ios/Three20
+export OM=$IP/order-manager
+export TN=$IP/tengri-news
+export EF=~/Projects/ios/envy/Frameworks/EnvyFoundation
 
-# Funcions
+# Functions
 ################################################################################
 
 # Find file on pattern $1
@@ -68,3 +70,15 @@ function fe() { find . -type f -iname '*'$1'*' -exec "${2:-file}" {} \; ; }
 
 # Find and open in MacVim
 # function fv() { fe "$1" mvim --remote-silent ; }
+
+function git_diff() {
+    if [[ -d ".git" ]] ; then
+        git diff -w | mvim -R -f -
+    fi
+}
+
+function git_mvim_diff() {
+    if [[ -d ".git" ]] ; then
+        mvim -p $(git diff --name-only) -s '/Users/shashlov/.vim/gdv_commands' 
+    fi
+}
