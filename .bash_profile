@@ -3,7 +3,8 @@ export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 
 # Vim
 ################################################################################
-alias v="mvim  --remote-silent"
+alias v="mvim --remote-silent"
+alias sv="sudo mvim --remote-silent"
 alias xco="open *.xcodeproj -a XCode"
 
 # Git
@@ -14,12 +15,14 @@ alias xco="open *.xcodeproj -a XCode"
 # located by default in /opt/local/share/doc/git-core/contrib/completion
 export GIT_PS1_SHOWDIRTYSTATE=1
 source ~/.sh/git-completion.bash
+source ~/.sh/git-flow-completion.bash
 
 # Setting bash prompt
 ################################################################################
 PS1='\e[0;32m\h:\e[m\W$(__git_ps1 " \e[0;31m[%s]\e[m")\$ '
 
 alias gst="git status"
+alias gc="git commit"
 alias gca="git commit -a"
 alias gaa="git add ."
 alias glg="git lg"
@@ -29,6 +32,7 @@ alias gb="git branch"
 alias gba="git branch -a"
 
 alias gd="git_diff"
+alias gdc="git_diff_cached"
 # alias gdv="git_mvim_diff"
 
 # Other commands
@@ -51,7 +55,11 @@ export _GC=~/.gitconfig
 export IP=~/Projects/ios
 export OM=$IP/order-manager
 export TN=$IP/tengri-news
-export EF=~/Projects/ios/envy/Frameworks/EnvyFoundation
+export EF=$IP/envy/Frameworks/EnvyFoundation
+export MKN=$IP/mkn
+export PA=$IP/photo-ager
+export SL=$IP/sms-light
+export EM=$IP/echo-msk
 
 # Functions
 ################################################################################
@@ -74,6 +82,12 @@ function fe() { find . -type f -iname '*'$1'*' -exec "${2:-file}" {} \; ; }
 function git_diff() {
     if [[ -d ".git" ]] ; then
         git diff -w | mvim -R -f -
+    fi
+}
+
+function git_diff_cached() {
+    if [[ -d ".git" ]] ; then
+        git diff -w --cached | mvim -R -f -
     fi
 }
 

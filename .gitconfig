@@ -9,6 +9,8 @@
     lgt = log --graph --pretty=format:'%Cred%h%Creset [%Cgreen(%cr)%Creset] -%C(yellow)%d%Creset %s' --since='1 day ago' 
     lgw = log --graph --pretty=format:'%Cred%h%Creset [%Cgreen(%cr)%Creset] -%C(yellow)%d%Creset %s' --since='1 week ago' 
     co = checkout
+[diff "localizablestrings"]
+	textconv = iconv -f utf-16 -t utf-8
 
 # Vimdiff tests 
 # [diff]
